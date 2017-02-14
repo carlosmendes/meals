@@ -1,0 +1,13 @@
+<h1>Meals#index</h1>
+<p>Find me in app/views/meals/index.html.erb</p>
+
+
+<% @meals.each do |meal| %>
+
+<p><%= link_to meal.name, meal %></p>
+<%= link_to "delete a meal", destroy_path(id: meal.id) %>
+<%= link_to "copy a meal", copy_path(id: meal.id) %>
+<% end %>
+
+<p>create a pukka recipe!<%= link_to "New meal", new_meal_path %></p>
+
